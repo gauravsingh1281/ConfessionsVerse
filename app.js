@@ -139,6 +139,9 @@ app.get("/register", (req, res) => {
 });
 
 app.get("/secrets", (req, res) => {
+  if (!req.isAuthenticated()) {
+    return res.redirect("/login");
+  }
   User.find({ secret: { $ne: null } }, (err, foundUsers) => {
     if (err) {
       console.log(err);
