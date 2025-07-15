@@ -1,31 +1,31 @@
 <%- include('partials/header') %>
 
   <div
-    class="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 px-4 py-12 text-white">
-    <div class="w-full max-w-2xl bg-gray-800 rounded-2xl shadow-lg p-8 space-y-6 text-center">
+    class="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 px-4 py-8 text-white">
+    <div class="w-full max-w-md sm:max-w-2xl bg-gray-800 rounded-2xl shadow-lg p-6 sm:p-8 space-y-6 text-center">
 
       <!-- Icon + Heading -->
       <div class="flex justify-center">
-        <i class="fas fa-key fa-6x text-yellow-400 drop-shadow-lg animate-pulse"></i>
+        <i class="fas fa-key fa-4x sm:fa-6x text-yellow-400 drop-shadow-lg animate-pulse"></i>
       </div>
-      <h1 class="text-4xl font-bold">Share Your Confession</h1>
-      <p class="text-gray-300 text-base">
-        Don't keep your confessions to yourself — share them anonymously and help others relate 🤍
+      <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold">Share Your Confession</h1>
+      <p class="text-gray-300 text-sm sm:text-base px-4">
+        Don't keep your confessions to yourself — share them anonymously and help others relate 💖
       </p>
 
       <!-- Confession Form -->
       <form action="/submit" method="POST" class="space-y-4">
-        <input type="text" name="secret" placeholder="What's your confession?" required
-          class="w-full px-4 py-3 rounded-xl bg-gray-700 text-white text-center placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400" />
+        <textarea name="secret" placeholder="What's your confession?" required rows="4"
+          class="w-full px-4 py-3 rounded-xl bg-gray-700 text-white text-center placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400 resize-none text-sm sm:text-base"></textarea>
 
         <button type="submit"
-          class="w-full bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-2 px-4 rounded-xl shadow transition duration-200">
+          class="w-full bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-3 px-4 rounded-xl shadow transition duration-200 text-base">
           Submit Confession
         </button>
       </form>
 
       <!-- Optional: Go back to see confessions -->
-      <div class="text-center text-sm text-gray-400 pt-4">
+      <div class="text-center text-xs sm:text-sm text-gray-400 pt-4">
         Want to see what others have shared?
         <a href="/secrets" class="text-yellow-400 hover:underline">Explore Confessions</a>
       </div>
